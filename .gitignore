@@ -1,0 +1,6 @@
+*.dSYM/
+*.mix.c
+*.o
+target_detector
+target
+mix
